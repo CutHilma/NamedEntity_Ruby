@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'svm_models', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<h1>SVM Training</h1>
+
+<%# <p>Total Data: <%= training_progress[:total_data] %></p>
+<%# <p>Completed Data: <%= training_progress[:completed_data] %></p> 
+
+<div class="container">
+  <h1>Training Data</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Text</th>
+        <th>Label</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% if @data_latih.present? %>
+        <% @data_latih.each do |data| %>
+          <tr>
+            <td><%= data[0] %></td>
+            <td><%= data[1] %></td>
+        <!-- Additional columns as needed -->
+          </tr>
+      <% end %>
+      <% else %>
+        <tr>
+          <td colspan="2">No data available</td>
+        </tr>
+      <% end %>
+    </tbody>
+
+    </tbody>
+  </table>
+</div>
+
+
+<p><strong>Training in progress...</strong></p>

@@ -1,0 +1,2 @@
+class SvmModel < ApplicationRecord
+end
